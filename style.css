@@ -1,0 +1,116 @@
+/* --- 1. Skip To Main Content (Position & :focus) --- */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #4a6741;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- 2 & 7. Navigation (Flexbox & Ít nhất 3 thuộc tính CSS) --- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8fa082;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* --- 8. Hover pseudo-class --- */
+nav a:hover {
+    background-color: #4a6741;
+    border-radius: 8px;
+    transform: translateY(-2px);
+}
+
+/* --- 5. Box model cho TẤT CẢ hình ảnh (Border, Padding, Border-radius) --- */
+img {
+    border: 3px solid #d4cbb3;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 100%;
+    background-color: white;
+}
+
+/* --- 6. Grid property (Trang chủ) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Khu vực Flexbox (Thư viện & Giới thiệu) --- */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 9. nth-child selector (Thư viện ảnh) --- */
+/* Tác động vào các thẻ figure ở vị trí chẵn, sau đó bo tròn ảnh bên trong nó */
+.image-with-note:nth-child(even) .gallery-img {
+    border-color: #8fa082;
+    border-radius: 50%;
+}
+
+/* Styling tổng thể & Footer */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9f8f4;
+    color: #333;
+}
+h1, h2 {
+    text-align: center;
+    color: #4a6741;
+}
+p {
+    line-height: 1.6;
+}
+
+/* Styling cho thanh bản quyền */
+footer {
+    background-color: #2c3e29;
+    color: #e2e8db;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Xóa khoảng cách mặc định của thẻ figure */
+.image-with-note {
+    margin: 0;
+    text-align: center; /* Căn giữa chữ so với ảnh */
+}
+
+/* Định dạng cho dòng chữ chú thích bên dưới */
+.image-with-note figcaption {
+    margin-top: 10px;      /* Tạo khoảng cách giữa ảnh và chữ */
+    font-size: 14px;       /* Kích thước chữ */
+    font-style: italic;    /* Chữ in nghiêng */
+    font-weight: 500;
+}
